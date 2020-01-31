@@ -1,0 +1,18 @@
+extends ./layout.pug
+block contenido
+	form(method='POST' action='/sessions')
+		div(class="col-md-6 remove-float center-block big-top-space")
+			div.form-group
+			label(for='email') Email:
+			input#email.form-control(type='text', placeholder='Email' name='email' value='mary' class="form-control")
+			div
+			label(for='password') Password:
+			input#password.form-control(type='password', placeholder='Password' name='password' value='mary' class="form-control")
+			div(class="row")
+				div(class="col-xs-12 col-sm-6")
+					div(class="top-space")
+					input#submit.form-control(type="submit" class="btn btn-info")
+				div(class="col-xs-12 col-sm-6 text-right")
+					div(class="top-space")
+					a(href="/signup") No tengo cuenta
+	

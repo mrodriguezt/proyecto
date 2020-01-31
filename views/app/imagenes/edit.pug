@@ -1,0 +1,14 @@
+extends ../../layout.pug
+block contenido
+	div(class="col-md-6 remove-float center-block big-top-space")
+		h1 Subir nueva imagen
+		form(method='POST' action='/app/imagenes/'+imagen._id+'?_method=PUT')
+			div(class="form-group")
+				label(for='title') Title:				
+				input#title.form-control(type='text' placeholder='Titulo de la Imagen:' value=''+ imagen.title name='title' class="form-control")
+				div
+				label(for='archivo') Imagen:
+				input#archivo.form-control(type='file' name='archivo' class="form-control")
+				div(class="row top-space")
+					div(class="col-xs-12 col-sm-6")
+						input#submit.form-control(type="submit" class="btn btn-info" value="Guardar")

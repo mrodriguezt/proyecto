@@ -1,0 +1,19 @@
+extends ../../layout.pug
+block contenido
+	form(method='POST' action='/app/imagenes')
+		div(class="col-md-6 remove-float center-block big-top-space")
+			h1 Subir Nueva Imagen
+			div.form-group
+			label(for='title') Title:
+			input#title.form-control(type='text', placeholder='Titulo de la Imagen:' name='title' value='mary' class="form-control")
+			div
+			div.form-group
+			label(for='archivo') Imagen:
+			input#username.form-control(type='file' name='archivo' class="form-control")
+			div(class="row")
+				div(class="col-xs-12 col-sm-6")
+					div(class="top-space")
+					input#submit.form-control(type="submit" class="btn btn-info" value="Guardar")
+				div(class="col-xs-12 col-sm-6 text-right")
+					div(class="top-space")
+					a(href="/login") Ya tengo cuenta
